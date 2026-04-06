@@ -1,9 +1,9 @@
 export default function App() {
   return (
     <div>
-      <h1 className="text-5xl text-blue-500">
-        TESTE TAILWIND
-      </h1>
+      <div className="bg-tema-principal">
+        <p className="text-texto-inversa">Texto</p>
+      </div>
     </div>
   );
 }
