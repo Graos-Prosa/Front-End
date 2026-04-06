@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../assets/fonts/FiraSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lexend';
+  src: url('../assets/fonts/Lexend-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+
+:root {
+  --background: #FFFFFF;
+
+  --cor-texto-principal: #000000;
+  --cor-texto-secundaria: #727272;
+  --cor-texto-inversa: #FFFFFF;
+
+  --cor-borda: #E2E2E2;
+
+  --cor-tema-principal: #142D41;
+  --cor-tema-secundaria: #C08E21;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'FiraSans', sans-serif;
+}
