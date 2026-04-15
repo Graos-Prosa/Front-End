@@ -34,3 +34,9 @@
 body {
   font-family: 'FiraSans', sans-serif;
 }
+
+@media (hover: hover) and (pointer: fine) {
+  button {
+    cursor: pointer;
+  }
+}
