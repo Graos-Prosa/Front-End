@@ -1,0 +1,39 @@
+.primaryButton {
+    background-color: var(--cor-tema-principal);
+    color: var(--cor-texto-inversa);
+}
+
+.secondaryButton {
+    background-color: transparent;
+    color: var(--cor-tema-principal);
+}
+
+.primaryButton,
+.secondaryButton {
+    border: 1px solid var(--cor-tema-principal);
+    font-family: Lexend, sans-serif;
+    transition: 0.2s;
+}
+
+.primaryButton:active,
+.secondaryButton:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .primaryButton:hover {
+        background-color: transparent;
+        color: var(--cor-tema-principal);
+    }
+
+    .secondaryButton:hover {
+        background-color: var(--cor-tema-principal);
+        color: var(--cor-texto-inversa);
+    }
+
+    .primaryButton:active,
+    .secondaryButton:active {
+        transform: scale(1);
+    }
+}
