@@ -29,9 +29,22 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 body {
+  font-family: 'FiraSans', sans-serif;
+}
+
+input {
+  font-family: 'FiraSans', sans-serif;
+}
+
+input::placeholder {
   font-family: 'FiraSans', sans-serif;
 }
 
