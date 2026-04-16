@@ -3,9 +3,9 @@ import type { CSSProperties } from "react";
 
 interface ButtonProps {
     type: "primary" | "secondary";
-    style: CSSProperties;
+    style?: CSSProperties;
     onClick: () => void;
-    textContent: string;
+    textContent: string | React.ReactNode;
 }
 
 export default function Button({type, style, onClick, textContent}: ButtonProps) {

@@ -13,6 +13,10 @@
     border: 1px solid var(--cor-tema-principal);
     font-family: Lexend, sans-serif;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
 }
 
 .primaryButton:active,

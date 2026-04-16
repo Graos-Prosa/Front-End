@@ -1,0 +1,42 @@
+.divEmailForm {
+    width: 75%;
+    text-align: center;
+}
+
+.divEmailForm > .h3StyleForm {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 100;
+    color: var(--cor-tema-principal);
+    margin-bottom: 6px;
+}
+
+.pStyleForm {
+    font-size: clamp(10px, 2vw, 14px);
+    font-weight: 100;
+    color: var(--cor-texto-secundaria);
+    margin-bottom: 25px;
+}
+
+.aStyleForm {
+    color: var(--cor-tema-secundaria);
+    font-size: clamp(10px, 2vw, 14px);
+}
+
+.divEmailForm > .emailForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.divCadastreSe {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 3px;
+}
+
+.logoGoogle {
+    height: 20px;
+}

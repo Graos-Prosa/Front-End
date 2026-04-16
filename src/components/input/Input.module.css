@@ -12,7 +12,7 @@
     border: none;
     border-bottom: 1px solid var(--cor-borda);
     color: var(--cor-texto-secundaria);
-    font-size: clamp(12px, 2vw, 16px);
+    font-size: clamp(10px, 2vw, 14px);
 }
 
 .fourthInput {
