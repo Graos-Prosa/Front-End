@@ -1,0 +1,88 @@
+.primaryNavbar, .secondaryNavbar, .thirdNavbar, .fourthNavbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.primaryNavbar, .secondaryNavbar, .thirdNavbar {
+    justify-content: space-between;
+}
+
+.fourthNavbar {
+    margin-top: 7px;
+    position: relative;
+}
+
+.divIcons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imgGp {
+    height: 38px;
+}
+
+.logoCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menuIcon {
+    height: 25px;
+    width: 25px;
+}
+
+.bagIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.searchIcon {
+    height: 20px;
+    width: 20px;
+}
+
+.bagWrapper {
+    position: relative;
+    display: flex;
+}
+
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: var(--cor-tema-secundaria);
+    color: var(--cor-texto-inversa);
+    font-size: 9px;
+    font-weight: bold;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+}
+
+.whiteColor {
+    color: var(--cor-texto-inversa);
+}
+
+.mainThemeColor {
+    color: var(--cor-tema-principal);
+}
+
+.whiteThemeBorder {
+    border-bottom: 1px solid var(--cor-texto-inversa);
+}
+
+.mainThemeBorder {
+    border-bottom: 1px solid var(--cor-tema-principal);
+}
+
+.displayNone {
+    display: none;
+}
