@@ -1,5 +1,7 @@
 import styles from "./Navbar.module.css"
+import SideBarMenu from "../sideBarMenu/SideBarMenu";
 import { IoMenuOutline, IoBagOutline, IoSearchOutline } from "react-icons/io5";
+import { useState } from "react";
 
 import LogoGpDourado from "../../assets/logo-gp-dourado.png"
 import LogoGpBranco from "../../assets/logo-gp-branco.png"
@@ -10,6 +12,18 @@ interface NavbarProps {
 }
 
 export default function Navbar({ type, itensInCart }: NavbarProps) {
+
+    const [menu, setMenu] = useState<boolean>(false)
+
+    const optionsSideBar = [
+        {name: "Editar perfil", route:""}, 
+        {name: "Meus endereços", route:""},
+        {name: "Meus pedidos", route:""},
+        {name: "Nossa historia", route:""},
+        {name: "Contato", route:""},
+        {name: "Ajuda", route:""}
+    ]
+
     const variants = {
         primary: styles.primaryNavbar,
         secondary: styles.secondaryNavbar,
@@ -29,7 +43,7 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
 
     return (
         <nav className={`${navbarType} ${navbarBorderType}`}>
-            <IoMenuOutline className={`${styles.menuIcon} ${navbarTheme}`} />
+            <IoMenuOutline className={`${styles.menuIcon} ${navbarTheme}`} onClick={() => setMenu(!menu)} />
             <img
                 className={`${styles.imgGp} ${type === "fourth" ? styles.logoCenter : ""}`}
                 src={navbarLogotype}
@@ -45,6 +59,7 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
                     <IoSearchOutline className={`${styles.searchIcon} ${navbarTheme}`} />
                 </div>
             )}
+            <SideBarMenu menu={menu} setMenu={setMenu} liOptions={optionsSideBar}/>
         </nav>
     );
 }
