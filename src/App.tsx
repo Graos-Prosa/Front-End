@@ -1,7 +1,9 @@
+import Navbar from "./components/navbar/Navbar";
+
 export default function App() {
   return (
-    <div>
-      Teste
+    <div className="divDebug">
+      <Navbar type={"primary"} itensInCart={2} />
     </div>
   );
 }

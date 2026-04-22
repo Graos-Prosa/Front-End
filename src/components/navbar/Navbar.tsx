@@ -1,7 +1,7 @@
 import styles from "./Navbar.module.css"
 import SideBarMenu from "../sideBarMenu/SideBarMenu";
 import { IoMenuOutline, IoBagOutline, IoSearchOutline } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import LogoGpDourado from "../../assets/logo-gp-dourado.png"
 import LogoGpBranco from "../../assets/logo-gp-branco.png"
@@ -14,8 +14,22 @@ interface NavbarProps {
 export default function Navbar({ type, itensInCart }: NavbarProps) {
 
     const [menu, setMenu] = useState<boolean>(false)
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+    useEffect(() => {
+        function handleScroll() {
+            setIsScrolled(window.scrollY > 0);
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     const optionsSideBar = [
+        {name: "Início", route:""}, 
         {name: "Editar perfil", route:""}, 
         {name: "Meus endereços", route:""},
         {name: "Meus pedidos", route:""},
@@ -33,16 +47,36 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
 
     const navbarType = variants[type];
 
-    const navbarLogotype = type === "primary" ? LogoGpBranco : LogoGpDourado;
+    const navbarLogotype =
+        type === "primary"
+            ? isScrolled
+                ? LogoGpDourado
+                : LogoGpBranco
+            : LogoGpDourado;
 
-    const navbarTheme = type === "primary" ? styles.whiteColor : styles.mainThemeColor;
+    const navbarTheme =
+        type === "primary"
+            ? isScrolled
+                ? styles.mainThemeColor
+                : styles.whiteColor
+            : styles.mainThemeColor;
 
-    const navbarBorderType = type === "primary" ? styles.whiteThemeBorder : type === "secondary" ? styles.mainThemeBorder : "";
+    const navbarBorderType =
+        type === "primary"
+            ? isScrolled
+                ? styles.mainThemeBorder
+                : styles.whiteThemeBorder
+            : type === "secondary"
+                ? styles.mainThemeBorder
+                : "";
+
+    const navbarScrolled =
+        type === "primary" && isScrolled ? styles.primaryScrolled : "";
 
     const containsItensInBag = itensInCart > 0 ? "" : styles.displayNone;
 
     return (
-        <nav className={`${navbarType} ${navbarBorderType}`}>
+        <nav className={`${navbarType} ${navbarBorderType} ${navbarScrolled}`}>
             <IoMenuOutline className={`${styles.menuIcon} ${navbarTheme}`} onClick={() => setMenu(!menu)} />
             <img
                 className={`${styles.imgGp} ${type === "fourth" ? styles.logoCenter : ""}`}
@@ -59,7 +93,7 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
                     <IoSearchOutline className={`${styles.searchIcon} ${navbarTheme}`} />
                 </div>
             )}
-            <SideBarMenu menu={menu} setMenu={setMenu} liOptions={optionsSideBar}/>
+            <SideBarMenu menu={menu} setMenu={setMenu} liOptions={optionsSideBar} theme={navbarTheme}/>
         </nav>
     );
 }
