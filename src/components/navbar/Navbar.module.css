@@ -1,3 +1,16 @@
+.primaryNavbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.5s;
+}
+
+.primaryScrolled {
+    background-color: var(--background);
+    transition: background-color 0.5s;
+}
+
 .primaryNavbar, .secondaryNavbar, .thirdNavbar, .fourthNavbar {
     display: flex;
     align-items: center;
@@ -57,14 +70,12 @@
     background-color: var(--cor-tema-secundaria);
     color: var(--cor-texto-inversa);
     font-size: 9px;
-    font-weight: bold;
     border-radius: 50%;
     height: 16px;
     width: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 100;
 }
 
 .whiteColor {
