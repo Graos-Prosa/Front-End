@@ -12,10 +12,9 @@ interface PropsSideBarMenu {
     menu: boolean;
     setMenu: React.Dispatch<React.SetStateAction<boolean>>;
     liOptions: Option[];
-    theme: string;
 }
 
-export default function SideBarMenu({menu, setMenu, liOptions, theme}: PropsSideBarMenu) {
+export default function SideBarMenu({menu, setMenu, liOptions }: PropsSideBarMenu) {
 
     // useEffect para bloquear o scroll enquanto o menu lateral estiver aberto.
     useEffect(() => {
@@ -31,18 +30,18 @@ export default function SideBarMenu({menu, setMenu, liOptions, theme}: PropsSide
             <div className={`${styles.overlay} ${menu ? styles.show : ""}`} onClick={() => setMenu(false)} />
             <aside className={`${styles.sidebar} ${menu ? styles.open : ""}`}>
                 <div className={styles.headerSidebar}>
-                    <IoCloseOutline className={`${styles.closeButton} ${theme}`} onClick={() => setMenu(false)}/>
+                    <IoCloseOutline className={`${styles.closeButton}`} onClick={() => setMenu(false)}/>
                     <div className={styles.loginArea}>
                         <span className={styles.backgroundUserIcon}>
-                            <FaUser className={`${styles.userIcon} ${theme}`}/>
+                            <FaUser className={`${styles.userIcon}`}/>
                         </span>
-                        <p className={theme}>Entrar</p>
+                        <p className={styles.userOrLogin}>Entrar</p>
                     </div>     
                 </div>
                 <ul className={styles.ulSidebar}>
                     {liOptions.map((option) => (
                         <li key={option.name}>
-                            <a href={option.route} className={theme}>{option.name}</a>
+                            <a href={option.route}>{option.name}</a>
                         </li>
                     ))}
                 </ul>

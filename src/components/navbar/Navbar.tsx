@@ -93,7 +93,7 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
                     <IoSearchOutline className={`${styles.searchIcon} ${navbarTheme}`} />
                 </div>
             )}
-            <SideBarMenu menu={menu} setMenu={setMenu} liOptions={optionsSideBar} theme={navbarTheme}/>
+            <SideBarMenu menu={menu} setMenu={setMenu} liOptions={optionsSideBar}/>
         </nav>
     );
 }

@@ -92,3 +92,7 @@
     color: var(--cor-tema-principal);
     text-decoration: none;
 }
+
+.userOrLogin {
+  color: var(--cor-tema-principal);
+}
