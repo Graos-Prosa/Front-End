@@ -62,3 +62,10 @@ input::placeholder {
   height: 1500px;
   background-color: #1d1d1d;
 }
+
+.divDebug > p {
+  margin-top: 70px;
+  margin-left: 20px;
+  align-self: flex-start;
+  color: #FFFFFF;
+}

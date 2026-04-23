@@ -8,10 +8,10 @@ import LogoGpBranco from "../../assets/logo-gp-branco.png"
 
 interface NavbarProps {
     type: "primary" | "secondary" | "third" | "fourth";
-    itensInCart: number
+    itensInCart?: number
 }
 
-export default function Navbar({ type, itensInCart }: NavbarProps) {
+export default function Navbar({ type, itensInCart = 0 }: NavbarProps) {
 
     const [menu, setMenu] = useState<boolean>(false)
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -29,11 +29,11 @@ export default function Navbar({ type, itensInCart }: NavbarProps) {
     }, []);
 
     const optionsSideBar = [
-        {name: "Início", route:""}, 
-        {name: "Editar perfil", route:""}, 
-        {name: "Meus endereços", route:""},
-        {name: "Meus pedidos", route:""},
-        {name: "Nossa historia", route:""},
+        {name: "Início", route:"/"}, 
+        {name: "Editar perfil", route:"/edit-profile"}, 
+        {name: "Meus endereços", route:"/addresses"},
+        {name: "Meus pedidos", route:"/orders"},
+        {name: "Nossa historia", route:"/our-story"},
         {name: "Contato", route:""},
         {name: "Ajuda", route:""}
     ]

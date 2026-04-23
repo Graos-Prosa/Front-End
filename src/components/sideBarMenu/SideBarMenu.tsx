@@ -2,6 +2,7 @@ import styles from "./SideBarMenu.module.css"
 import { IoCloseOutline } from "react-icons/io5";
 import { FaUser } from "react-icons/fa";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 type Option = {
   name: string;
@@ -41,7 +42,7 @@ export default function SideBarMenu({menu, setMenu, liOptions }: PropsSideBarMen
                 <ul className={styles.ulSidebar}>
                     {liOptions.map((option) => (
                         <li key={option.name}>
-                            <a href={option.route}>{option.name}</a>
+                            <Link to={option.route}>{option.name}</Link>
                         </li>
                     ))}
                 </ul>

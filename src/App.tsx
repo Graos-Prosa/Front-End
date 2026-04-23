@@ -1,9 +1,7 @@
-import Navbar from "./components/navbar/Navbar";
+import AppRoutes from "./routes/AppRoutes";
 
-export default function App() {
-  return (
-    <div className="divDebug">
-      <Navbar type={"primary"} itensInCart={2} />
-    </div>
-  );
+function App() {
+  return <AppRoutes />;
 }
+
+export default App;
