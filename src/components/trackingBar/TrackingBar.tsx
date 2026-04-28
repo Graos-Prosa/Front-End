@@ -12,10 +12,7 @@ type StepProgressBarProps = {
   currentStep: number;
 };
 
-export default function StepProgressBar({
-  steps,
-  currentStep,
-}: StepProgressBarProps) {
+export default function StepProgressBar({ steps, currentStep }: StepProgressBarProps) {
   const totalSteps = steps.length;
 
   const safeTotal = totalSteps > 1 ? totalSteps : 2;
