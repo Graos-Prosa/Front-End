@@ -10,7 +10,7 @@
   position: absolute;
   height: 3px;
   width: 100%;
-  top: 25px;
+  top: 46px;
   background-color: var(--cor-borda);
   z-index: 0;
 }
@@ -18,7 +18,7 @@
 .progress {
   position: absolute;
   height: 2px;
-  top: 25px;
+  top: 46px;
   left: 0;
   background-color: var(--cor-tema-principal);
   z-index: 1;
@@ -29,6 +29,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5px;
   z-index: 2;
 }
 
@@ -66,4 +67,12 @@
 
 .textBar {
   font-size: 14px;
+}
+
+.dateStyle {
+  font-size: 10px;
+  color: var(--cor-texto-secundaria);
+  max-width: 45px;
+  text-align: center;
+  margin-top: -3px;
 }
