@@ -1,4 +1,4 @@
-import Navbar from "../../components/navbar/Navbar";
+import Navbar from "../../components/common/navbar/Navbar";
 
 export default function Addresses() {
   return (

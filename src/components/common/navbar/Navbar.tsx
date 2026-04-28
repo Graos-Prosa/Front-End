@@ -3,8 +3,8 @@ import SideBarMenu from "../sideBarMenu/SideBarMenu";
 import { IoMenuOutline, IoBagOutline, IoSearchOutline } from "react-icons/io5";
 import { useEffect, useState } from "react";
 
-import LogoGpDourado from "../../assets/logo-gp-dourado.png"
-import LogoGpBranco from "../../assets/logo-gp-branco.png"
+import LogoGpDourado from "../../../assets/logo-gp-dourado.png"
+import LogoGpBranco from "../../../assets/logo-gp-branco.png"
 
 interface NavbarProps {
     type: "primary" | "secondary" | "third" | "fourth";

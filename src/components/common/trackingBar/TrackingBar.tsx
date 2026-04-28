@@ -5,17 +5,25 @@ import type { ComponentType } from "react";
 type Step = {
   label: string;
   icon: ComponentType;
+  updateDate?: string;
 };
 
-type StepProgressBarProps = {
-  steps: Step[];
-  currentStep: number;
-};
+interface StepProgressBarProps {
+  steps: Step[]
+}
 
-export default function StepProgressBar({ steps, currentStep }: StepProgressBarProps) {
+export default function StepProgressBar({ steps }: StepProgressBarProps) {
   const totalSteps = steps.length;
 
   const safeTotal = totalSteps > 1 ? totalSteps : 2;
+
+  let currentStep = 0;
+
+  steps.forEach((step) => {
+    if (step.updateDate) {
+      currentStep++;
+    }
+  });
 
   const progressWidth =
     ((currentStep - 1) / (safeTotal - 1)) * 100;
@@ -35,6 +43,10 @@ export default function StepProgressBar({ steps, currentStep }: StepProgressBarP
 
         return (
           <div className={styles.progressStep} key={index}>
+            <span
+              className={`${styles.textBar} ${isCompleted? styles.completed : isCurrent ? styles.current : styles.upcoming}`}>
+              {step.label}
+            </span>
             <div
               className={`${styles.icon} ${
                 index < currentStep ? styles.active : ""
@@ -42,11 +54,7 @@ export default function StepProgressBar({ steps, currentStep }: StepProgressBarP
             >
               <Icon />
             </div>
-
-            <span
-              className={`${styles.textBar} ${isCompleted? styles.completed : isCurrent ? styles.current : styles.upcoming}`}>
-              {step.label}
-            </span>
+            <span className={styles.dateStyle}>{step.updateDate}</span>
           </div>
         );
       })}
