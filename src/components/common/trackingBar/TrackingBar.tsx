@@ -1,6 +1,8 @@
 import styles from "./TrackingBar.module.css";
 import type { ComponentType } from "react";
 
+//import { FaTruck, FaShoppingCart, FaCreditCard, FaFlag } from "react-icons/fa"
+//Use these icons as an example of how to use the component, but you can replace them with any icons you want;
 
 type Step = {
   label: string;
