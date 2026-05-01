@@ -3,7 +3,7 @@ import Button from '../button/Button';
 
 import { TiStarFullOutline } from "react-icons/ti";
 
-import { truncateString } from '../../../utils/util';
+import { truncateString } from '../../../utils/Util';
 
 interface ProductCardProps {
     id: number;
