@@ -3,6 +3,8 @@ import Button from '../button/Button';
 
 import { TiStarFullOutline } from "react-icons/ti";
 
+import { truncateString } from '../../../utils/util';
+
 interface ProductCardProps {
     id: number;
     img: string;
@@ -15,12 +17,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({id, img, name, price, rating, amount, productType, discount = 0}: ProductCardProps) {
-
-    function truncateString(name: string) {
-        const max = 33;
-        return name.length > max ? name.slice(0, max) + "..." : name;
-    }
-
+    
     function verifyAmount(amount: number) {
         if (amount <= 0) {
             return "Esgotado";
@@ -54,7 +51,7 @@ export default function ProductCard({id, img, name, price, rating, amount, produ
             </div>
             <img src={img} alt={name} className={styles.productImage} onClick={() => {goToProductPage(id)}} style={{ filter: amount <= 0 ? "grayscale(100%)" : "none" }}/>
             <div className={styles.productInfo} onClick={() => {goToProductPage(id)}}>
-                <p className={styles.name}>{truncateString(name)}</p>
+                <p className={styles.name}>{truncateString(name, 33)}</p>
                 <div className={styles.infoContainer}>
                     <div className={styles.ratingContainer}>
                         <p className={styles.rating}>{rating.toFixed(1)}</p>
