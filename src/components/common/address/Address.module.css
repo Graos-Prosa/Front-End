@@ -1,0 +1,44 @@
+.address {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.address > p {
+    font-size: 10px;
+}
+
+.address > .addressDetails > p {
+    font-size: 10px;
+}
+
+.addressDetails {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 15px;
+    margin-top: 12px;
+}
+
+.uniqueButtonContainer {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 12px;
+}
+
+.blueColor {
+    color: var(--cor-tema-principal);
+}
