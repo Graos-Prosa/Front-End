@@ -1,0 +1,23 @@
+.subTotalStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.divSubTotalStatus {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pSubTotalStatus {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.pSubTotalStatusValue {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: end;
+}
