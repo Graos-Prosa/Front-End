@@ -2,7 +2,7 @@ import styles from "./FormLogin.module.css"
 import Input from "../input/Input"
 import Button from "../button/Button"
 
-import GoogleIcon from "../../assets/logoGoogle.png"
+import GoogleIcon from "../../../assets/logoGoogle.png"
 
 import { useState } from "react"
 
@@ -15,6 +15,12 @@ export default function FormLogin() {
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         console.log(formData);
+        // Aqui você pode implementar a lógica de autenticação, como enviar os dados para um servidor ou verificar as credenciais localmente.
+    }
+
+    function handleGoogleLogin() {
+        console.log("Login com Google");
+        // Aqui você pode implementar a lógica de autenticação com Google, como redirecionar para a página de login do Google ou usar uma biblioteca de autenticação.
     }
 
     return (
@@ -23,12 +29,13 @@ export default function FormLogin() {
             <p className={styles.pStyleForm}>Entre com sua conta para comprar nosso produtos e receber novidades.</p>
             <form onSubmit={handleSubmit} className={styles.emailForm}>
                 <Input type={"email"} style={{width: "100%", padding: "5px"}} styleType={"third"} placeholder={"E-mail"} onChange={(e) => setFormData({ ...formData, email: e.target.value })} value={formData.email}/>
-                <Input type={"password"} style={{width: "100%", padding: "5px", marginTop: "10px"}} styleType={"third"} placeholder={"Senha"} onChange={(e) => setFormData({ ...formData, email: e.target.value })} value={formData.password}/>
-                <Button type={"primary"} style={{width: "100%", padding: "10px", marginTop: "18px"}} onClick={() => alert("Funcionou")} textContent={"Entrar"} />
-                <Button 
+                <Input type={"password"} style={{width: "100%", padding: "5px", marginTop: "10px"}} styleType={"third"} placeholder={"Senha"} onChange={(e) => setFormData({ ...formData, password: e.target.value })} value={formData.password}/>
+                <Button type={"primary"} style={{width: "100%", padding: "10px", marginTop: "18px", borderRadius: "5px"}} textContent={"Entrar"} />
+            </form>
+            <Button 
                     type={"secondary"} 
-                    style={{width: "100%", padding: "8px", marginTop: "2px"}} 
-                    onClick={() => alert("Funcionou")} 
+                    style={{width: "100%", padding: "8px", marginTop: "10px", borderRadius: "5px"}} 
+                    onClick={handleGoogleLogin} 
                     textContent={
                         <>
                             <img src={GoogleIcon} alt="logo google" className={styles.logoGoogle}/>
@@ -36,7 +43,6 @@ export default function FormLogin() {
                         </>
                     } 
                 />
-            </form>
             <div className={styles.divCadastreSe}>
                 <p className={styles.pStyleForm}>Não possui conta?</p>
                 <a className={styles.aStyleForm} href="">cadastre-se</a>

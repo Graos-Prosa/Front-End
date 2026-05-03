@@ -4,7 +4,7 @@ import type { CSSProperties } from "react";
 interface ButtonProps {
     type: "primary" | "secondary";
     style?: CSSProperties;
-    onClick: () => void;
+    onClick?: () => void;
     textContent: string | React.ReactNode;
 }
 
