@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+☕ Grãos & Prosa - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend desenvolvido para a plataforma Grãos & Prosa, com foco em organização, reutilização de componentes e uma experiência de usuário fluida e moderna.
 
-Currently, two official plugins are available:
+📖 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+O Grãos & Prosa - Frontend é a interface web de um e-commerce voltado ao segmento de cafés e produtos relacionados. A aplicação foi construída utilizando React com TypeScript, priorizando escalabilidade, componentização e boas práticas de desenvolvimento.
 
-## React Compiler
+A estrutura do projeto foi pensada para facilitar manutenção e crescimento, com separação clara entre páginas, componentes reutilizáveis, serviços e rotas.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A interface permite ao usuário:
 
-## Expanding the ESLint configuration
+Navegar pelos produtos
+Visualizar detalhes dos cafés
+Adicionar itens ao carrinho
+Acompanhar etapas de compra
+Gerenciar pedidos e informações pessoais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🚀 Tecnologias Utilizadas
+React
+TypeScript
+Vite
+CSS Modules
+React Router
+Fetch Api
+ESLint
+🧠 Arquitetura
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O projeto segue uma arquitetura modular baseada em separação de responsabilidades:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+src/
+│
+├── api/            → Configuração de chamadas HTTP
+├── assets/         → Imagens, ícones e recursos estáticos
+├── components/     → Componentes reutilizáveis
+│   ├── common/     → Componentes genéricos (botões, inputs, etc.)
+│   └── layouts/    → Estruturas de layout (header, footer, etc.)
+│
+├── pages/          → Páginas da aplicação
+├── routes/         → Configuração de rotas
+├── service/        → Regras de negócio e integração com API
+├── styles/         → Estilos globais
+│
+├── App.tsx         → Componente raiz
+├── main.tsx        → Entry point da aplicação
+🧩 Componentização
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+A aplicação é construída com foco em reutilização:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Componentes comuns → Botões, inputs, cards
+Layouts → Estrutura base das páginas (ex: layout de carrinho, layout padrão)
+Componentes específicos → Ex: barra de progresso de etapas de compra
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🔗 Integração com Backend
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+O frontend consome a API REST do backend Grãos & Prosa, utilizando:
+
+Autenticação via JWT
+Consumo de endpoints de:
+Produtos
+Usuários
+Pedidos
+Endereços
+Cupons
+
+🔐 Autenticação
+Login com email e senha
+Persistência de token JWT
+Proteção de rotas autenticadas
+⚙️ Como Executar o Projeto
+📋 Pré-requisitos
+Node.js (18+ recomendado)
+npm
+
+📦 Instalação
+npm install
+
+▶️ Executando o projeto
+npm run dev
+
+🌐 Acesso
+http://localhost:5173
+
+⚠️ Observações
+Certifique-se de que o backend esteja rodando
+Configure corretamente a URL da API no projeto (arquivo dentro de /api)
+Verifique conflitos de porta
+🔮 Futuro
+
+Melhorias na experiência do usuário (UX)
+Integração completa com pagamentos
+Otimização de performance
+Implementação de busca avançada
+Testes automatizados (unitários e e2e)
+👨‍💻 Autor
+
+Juan Santos
+🔗 GitHub: https://github.com/Juan8Santos
