@@ -29,22 +29,23 @@ ESLint
 
 O projeto segue uma arquitetura modular baseada em separação de responsabilidades:
 
+```bash
 src/
 │
-├── api/            → Configuração de chamadas HTTP
-├── assets/         → Imagens, ícones e recursos estáticos
-├── components/     → Componentes reutilizáveis
-│   ├── common/     → Componentes genéricos (botões, inputs, etc.)
-│   └── layouts/    → Estruturas de layout (header, footer, etc.)
+├── api/            # Configuração de chamadas HTTP
+├── assets/         # Imagens, ícones e recursos estáticos
+├── components/     # Componentes reutilizáveis
+│   ├── common/     # Componentes genéricos (botões, inputs, etc.)
+│   └── layouts/    # Estruturas de layout (header, footer, etc.)
 │
-├── pages/          → Páginas da aplicação
-├── routes/         → Configuração de rotas
-├── service/        → Regras de negócio e integração com API
-├── styles/         → Estilos globais
+├── pages/          # Páginas da aplicação
+├── routes/         # Configuração de rotas
+├── service/        # Regras de negócio e integração com API
+├── styles/         # Estilos globais
 │
-├── App.tsx         → Componente raiz
-├── main.tsx        → Entry point da aplicação
-🧩 Componentização
+├── App.tsx         # Componente raiz
+├── main.tsx        # Entry point da aplicação
+```
 
 A aplicação é construída com foco em reutilização:
 
@@ -102,11 +103,11 @@ Testes automatizados (unitários e e2e)
   <tr>
     <td align="center">
       <h3>Juan Santos</h3>
-      <a href="(https://github.com/Juan8Santos)" target="_blank">
+      <a href="https://github.com/Juan8Santos" target="_blank">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
       </a>
       <br><br>
-      <a href="(https://www.linkedin.com/in/juanpaixao/)" target="_blank">
+      <a href="https://www.linkedin.com/in/juanpaixao/" target="_blank">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
       </a>
     </td>
