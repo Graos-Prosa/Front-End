@@ -1,0 +1,1 @@
+export const IS_LOGGED:boolean = true

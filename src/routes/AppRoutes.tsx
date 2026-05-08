@@ -5,6 +5,7 @@ import EditPage from "../pages/editProfile/EditProfile";
 import Addresses from "../pages/addresses/Addresses";
 import MyOrders from "../pages/myOrders/MyOrders";
 import HistoryPage from "../pages/historyPage/HistoryPage";
+import ProductsPage from "../pages/productsPage/ProductsPage";
 
 export default function AppRoutes() {
   return (
@@ -14,6 +15,7 @@ export default function AppRoutes() {
       <Route path="/addresses" element={<Addresses />} />
       <Route path="/orders" element={<MyOrders />} />
       <Route path="/our-story" element={<HistoryPage />} />
+      <Route path="/products" element={<ProductsPage />} />
     </Routes>
   );
 }

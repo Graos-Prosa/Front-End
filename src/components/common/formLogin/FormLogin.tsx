@@ -30,11 +30,11 @@ export default function FormLogin() {
             <form onSubmit={handleSubmit} className={styles.emailForm}>
                 <Input type={"email"} style={{width: "100%", padding: "5px"}} styleType={"third"} placeholder={"E-mail"} onChange={(e) => setFormData({ ...formData, email: e.target.value })} value={formData.email}/>
                 <Input type={"password"} style={{width: "100%", padding: "5px", marginTop: "10px"}} styleType={"third"} placeholder={"Senha"} onChange={(e) => setFormData({ ...formData, password: e.target.value })} value={formData.password}/>
-                <Button type={"primary"} style={{width: "100%", padding: "10px", marginTop: "18px", borderRadius: "5px"}} textContent={"Entrar"} />
+                <Button type={"primary"} style={{width: "100%", padding: "10px", marginTop: "18px"}} textContent={"Entrar"} />
             </form>
             <Button 
                     type={"secondary"} 
-                    style={{width: "100%", padding: "8px", marginTop: "10px", borderRadius: "5px"}} 
+                    style={{width: "100%", padding: "8px", marginTop: "10px"}} 
                     onClick={handleGoogleLogin} 
                     textContent={
                         <>
