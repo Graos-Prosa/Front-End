@@ -62,7 +62,7 @@ export default function ProductCard({id, img, name, price, rating, amount, produ
             </div>
             <Button 
                 type={"primary"} 
-                style={{width: '100%', height: '34px', fontSize: '12px', borderRadius: '5px', backgroundColor: amount <= 0 ? '#AEAEAE' : '', cursor: amount <= 0 ? 'not-allowed' : '', border: amount <= 0 ? '1px solid #AEAEAE' : ''}} 
+                style={{width: '100%', height: '34px', fontSize: '12px', backgroundColor: amount <= 0 ? '#AEAEAE' : '', cursor: amount <= 0 ? 'not-allowed' : '', border: amount <= 0 ? '1px solid #AEAEAE' : ''}} 
                 onClick={() => {handleAddToCart(id, amount)}}
                 textContent={verifyAmount(amount)}
             />
