@@ -1,0 +1,80 @@
+.footer {
+  width: 100%;
+  background-color: #ffffff;
+  color: #777777;
+  font-family: Arial, sans-serif;
+  margin: 0 0 0 10px;
+}
+
+.row {
+  height: 72px;
+  margin: 0 18px;
+  padding: 0 28px;
+  border-bottom: 1px solid #b8b8b8;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row:first-child {
+  border-top: 1px solid #b8b8b8;
+}
+
+.row span {
+  font-size: 16px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+
+  font-size: 28px;
+  color: #173247;
+}
+
+.icons svg {
+  display: block;
+}
+
+.paymentIcons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  max-width: 230px;
+}
+
+.paymentIcons img {
+  height: 25px;
+  max-width: 38px;
+  object-fit: contain;
+  display: block;
+}
+
+.bottom {
+  height: 147px;
+  padding: 0 18px 22px 18px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777777;
+}
+
+.bottom span {
+  line-height: 1.1;
+}
+
+.bottom span:first-child {
+  text-align: left;
+  padding-bottom: 16px;
+}
+
+.bottom span:last-child {
+  text-align: right;
+}

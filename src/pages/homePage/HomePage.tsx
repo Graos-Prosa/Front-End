@@ -4,6 +4,7 @@ import StoreArea from "../../components/layouts/storeArea/StoreArea";
 import Navbar from "../../components/common/navbar/Navbar";
 import InfoArea from "../../components/layouts/infoArea/InfoArea";
 import FormLogin from "../../components/common/formLogin/FormLogin";
+import Footer from "../../components/common/footer/Footer";
 
 import styles from "./HomePage.module.css";
 
@@ -29,6 +30,8 @@ export default function HomePage() {
       <InfoArea />
 
       {IS_LOGGED && <FormLogin />}
+
+      <Footer />
 
     </div>
   );
