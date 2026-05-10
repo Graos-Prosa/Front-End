@@ -1,9 +1,9 @@
 import {
   FaInstagram,
-  FaWhatsapp,
-  FaPhoneAlt,
-  FaEnvelope,
+  FaWhatsapp
 } from "react-icons/fa";
+
+import { MdOutlineLocalPhone, MdOutlineEmail  } from "react-icons/md";
 
 import { FiFacebook } from "react-icons/fi";
 
@@ -22,10 +22,18 @@ export default function Footer() {
       <div className={styles.row}>
         <span>Redes Sociais</span>
 
-        <div className={styles.icons}>
-          <FaInstagram />
-          <FaWhatsapp />
-          <FiFacebook />
+        <div className={styles.iconsDiv}>
+          <a href="https://www.instagram.com/graoseprosa?igsh=NjB0eXdvejZoaXo2"
+            className={styles.icons}
+          >
+            <FaInstagram />
+          </a>
+          <a href="" className={styles.icons}><FaWhatsapp /></a>
+          <a href="https://www.facebook.com/share/1DxGMvSLAK"
+            className={styles.icons}
+          >
+            <FiFacebook />
+          </a>
         </div>
       </div>
 
@@ -45,20 +53,33 @@ export default function Footer() {
       <div className={styles.row}>
         <span>Contato</span>
 
-        <div className={styles.icons}>
-          <FaPhoneAlt />
-          <FaEnvelope />
+        <div className={styles.iconsDiv}>
+          <a href="" className={styles.icons}><MdOutlineLocalPhone /></a>
+          <a href="" className={styles.icons}><MdOutlineEmail /></a>
         </div>
       </div>
 
-      <div className={styles.bottom}>
-        <span>Grãos e Prosa</span>
+      <div className={styles.bottomFooter}>
 
-        <span>
-          2026@ Copyright. All
-          <br />
-          rights reserved
-        </span>
+        <div className={styles.bottomTop}>
+          <span><strong>Grãos & Prosa Comércio de Café</strong></span>
+          <span>CNPJ: 62.431.423/0001-13</span>
+          <span>Rio de Janeiro - RJ</span>
+        </div>
+
+        <div className={styles.bottom}>
+          <span>
+            <strong>Política de Privacidade</strong>
+            <br />
+            <strong>Termos de Uso</strong>
+          </span>
+          <span>
+            2026@ Copyright. All
+            <br />
+            rights reserved
+          </span>
+        </div>
+
       </div>
     </footer>
   );
