@@ -4,9 +4,12 @@ import StoreArea from "../../components/layouts/storeArea/StoreArea";
 import Navbar from "../../components/common/navbar/Navbar";
 import InfoArea from "../../components/layouts/infoArea/InfoArea";
 import FormLogin from "../../components/common/formLogin/FormLogin";
+import AlternativeInfoCard from "../../components/common/alternativeInfoCard/AlternativeInfoCard";
 import Footer from "../../components/common/footer/Footer";
 
 import styles from "./HomePage.module.css";
+
+import FotoBanner from "../../assets/top-view-delicious-coffee-table.jpg"
 
 //mock
 import { topAdsMock } from "../../data/mocks/TopAd.mock";
@@ -30,6 +33,8 @@ export default function HomePage() {
       <InfoArea />
 
       {IS_LOGGED && <FormLogin />}
+
+      <AlternativeInfoCard imageSrc={FotoBanner} imageAlt={"dad"} linkTo={"Conheça cada etapa do processo com o grão de café"} onClick={() => alert("Foi!")}/>
 
       <Footer />
 
