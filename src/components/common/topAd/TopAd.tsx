@@ -17,63 +17,49 @@ interface TopAdProps {
 export default function TopAd({ ads }: TopAdProps) {
 
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const [direction, setDirection] = useState<
-        "left" | "right"
-    >("right");
-
+    const [direction, setDirection] = useState<"left" | "right">("right");
     const [isAnimating, setIsAnimating] = useState(false);
 
     if (!ads || ads.length === 0) return null;
 
     function nextAd() {
-
         if (isAnimating) return;
 
         setDirection("right");
         setIsAnimating(true);
 
         setTimeout(() => {
-
             setCurrentIndex((prev) =>
-                prev === ads.length - 1
+                prev === ads!.length - 1
                     ? 0
                     : prev + 1
             );
-
             setIsAnimating(false);
-
         }, 300);
     }
 
     function prevAd() {
-
         if (isAnimating) return;
 
         setDirection("left");
         setIsAnimating(true);
 
         setTimeout(() => {
-
             setCurrentIndex((prev) =>
                 prev === 0
-                    ? ads.length - 1
+                    ? ads!.length - 1
                     : prev - 1
             );
-
             setIsAnimating(false);
-
         }, 300);
     }
 
     useEffect(() => {
-
         const interval = setInterval(() => {
             nextAd();
         }, 10000);
 
         return () => clearInterval(interval);
-
     }, [currentIndex, isAnimating]);
 
     const currentAd = ads[currentIndex];
