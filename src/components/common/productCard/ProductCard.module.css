@@ -76,7 +76,7 @@
     position: absolute;
     top: 8px;
     right: 8px;
-    height: 12px;
+    height: 14px;
     width: 46px;
     border: 0.4px solid var(--cor-tema-secundaria);
     display: flex;
@@ -86,16 +86,16 @@
 }
 
 .productType > p {
-    font-size: 6px;
+    font-size: 8px;
     font-weight: lighter;
     color: var(--cor-tema-secundaria);
 }
 
 .discountCard {
     position: absolute;
-    top: 24px;
+    top: 26px;
     right: 8px;
-    height: 12px;
+    height: 14px;
     width: 46px;
     border: 0.4px solid #B81B1B;
     display: flex;
@@ -105,7 +105,7 @@
 }
 
 .discountCard > p {
-    font-size: 6px;
+    font-size: 8px;
     font-weight: lighter;
     color: #B81B1B;
 }

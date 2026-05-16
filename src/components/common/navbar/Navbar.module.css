@@ -15,7 +15,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 5px 20px;
+    padding: 10px 20px;
 }
 
 .primaryNavbar, .secondaryNavbar, .thirdNavbar {
@@ -34,7 +34,7 @@
 }
 
 .imgGp {
-    height: 38px;
+    height: 45px;
 }
 
 .logoCenter {
@@ -44,18 +44,18 @@
 }
 
 .menuIcon {
+    height: 30px;
+    width: 30px;
+}
+
+.bagIcon {
     height: 25px;
     width: 25px;
 }
 
-.bagIcon {
-    height: 20px;
-    width: 20px;
-}
-
 .searchIcon {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
 
 .bagWrapper {

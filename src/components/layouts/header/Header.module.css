@@ -1,13 +1,15 @@
 .header {
     width: 100%;
     position: relative;
-    margin-top: -50px;
+    margin-top: -66px;
 }
 
 .fotoHome {
     width: 100%;
     height: auto;
     object-fit: cover;
+    min-height: 285px;
+    object-position: 30% center;
 
     display: block;
 
