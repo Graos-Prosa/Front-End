@@ -21,7 +21,15 @@
 .filterArea {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px;
+    width: 100%;
+    gap: 12px;
+}
+
+.filterAreaProductsPage {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
     width: 100%;
     gap: 12px;
 }
