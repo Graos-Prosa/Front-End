@@ -3,6 +3,7 @@ import Button from "../../common/button/Button";
 import ProductCard from "../../common/productCard/ProductCard";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { IoFilter } from "react-icons/io5";
 
 //mock
 import { productsMock } from "../../../data/mocks/Products.mock";
@@ -17,7 +18,11 @@ interface StoreAreaProps {
 export default function StoreArea({ style, maxProducts = 0, productsPage = false }: StoreAreaProps) {
     type FilterType = "Todos" | "Acessorios" | "Cafés";
 
+    interface DataFormType {search: string}
+
     const [selectedFilter, setSelectedFilter] = useState<FilterType>("Todos");
+
+    const [formData, setFormData] = useState<DataFormType>({search: ""})
 
     const navigate = useNavigate();
 
@@ -72,8 +77,8 @@ export default function StoreArea({ style, maxProducts = 0, productsPage = false
             {
                 productsPage ?
                     <div className={styles.filterAreaProductsPage}>
-                        <Input type={"text"} style={{width: "100%", padding: "5px"}} styleType={"primary"} placeholder={"Buscar produto"} onChange={(e) => console.log(e.target.value)} value="" /> {/*Consertar dps aqui !!!!!*/}
-                        <Button type={handleSelectedButton("Todos")} textContent={"Test"} onClick={() => handleFilterClick("Todos")} style={{width: "33%", padding: "10px", fontSize: "12px"}}/> {/*Consertar dps aqui !!!!!*/}
+                        <Input type={"text"} style={{width: "100%", padding: "5px"}} styleType={"primary"} placeholder={"Buscar produto"} onChange={(e) => setFormData({ ...formData, search: e.target.value })} value={formData.search} /> {/*Consertar dps aqui !!!!!*/}
+                        <Button type={handleSelectedButton("Todos")} textContent={<IoFilter size={16} />} onClick={() => handleFilterClick("Todos")} style={{width: "24%", padding: "10px", fontSize: "12px"}}/> {/*Consertar dps aqui !!!!!*/}
                     </div>
                 :
                     <div className={styles.filterArea}>
@@ -81,7 +86,7 @@ export default function StoreArea({ style, maxProducts = 0, productsPage = false
                         <Button type={handleSelectedButton("Acessorios")} textContent={"Acessorios"} onClick={() => handleFilterClick("Acessorios")} style={{width: "33%", padding: "10px", fontSize: "12px"}}/>
                         <Button type={handleSelectedButton("Cafés")} textContent={"Cafés"} onClick={() => handleFilterClick("Cafés")} style={{width: "33%", padding: "10px", fontSize: "12px"}}/>
                     </div>
-                }
+            }
             <div className={styles.productsArea}>
                 {filteredProducts.slice(0, maxProducts).map((product) => (
                     <ProductCard

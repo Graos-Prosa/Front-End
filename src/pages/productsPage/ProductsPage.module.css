@@ -5,6 +5,14 @@
     width: 100%;
 }
 
+.loadMoreProductsButtonArea {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -45px;
+    margin-bottom: 50px;
+}
+
 .heroSection {
     position: relative;
 }
