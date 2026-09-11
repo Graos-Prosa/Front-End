@@ -1,0 +1,18 @@
+.comment{
+    display: flex;
+    flex-direction: column;
+}
+.reviewInfo{
+    display: flex;
+    flex-direction: column;
+}
+.commentReview{
+    display: flex;
+    flex-direction: column;
+}
+.client, .star, .commentTitle{
+    font-size: 14px;
+}
+.reviewDate, .reviewComment{
+    font-size: 11px;
+}
