@@ -19,7 +19,7 @@ export default function Comment({
   return (
     <div className={styles.comment}>
       <div className={styles.reviewInfo}>
-        <div className={styles.row}>
+        <div className={styles.clientAndRating}>
           <h1 className={styles.client}>{client}</h1>
           <span className={styles.stars}>{<Stars rating={rating} />}</span>
         </div>
@@ -27,10 +27,11 @@ export default function Comment({
           Avaliado em {reviewDate.toLocaleDateString()}
         </p>
       </div>
-      <div className={styles.commentReview}>
+      <div className={styles.reviewComment}>
         <h1 className={styles.commentTitle}>{commentTitle}</h1>
         <p className={styles.commentDescription}>{commentDescription}</p>
       </div>
+      <div className={styles.divider}></div>
     </div>
   );
 }
