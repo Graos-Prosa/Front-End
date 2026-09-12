@@ -1,6 +1,9 @@
 .comment{
     display: flex;
     flex-direction: column;
+    gap: 10px;
+    align-self: flex-start;
+    padding: 20px;
 }
 .reviewInfo{
     display: flex;
@@ -10,9 +13,22 @@
     display: flex;
     flex-direction: column;
 }
+.clientAndRating{
+    display: flex;
+    gap: 10px;
+}
 .client, .star, .commentTitle{
     font-size: 14px;
 }
-.reviewDate, .reviewComment{
+.star{
+    color: var(--cor-tema-secundaria)
+}
+.reviewDate, .commentDescription{
     font-size: 11px;
+    color: var(--cor-texto-secundaria);
+}
+.divider{
+    height: 1px;
+    width: 100%;
+    background-color: var(--cor-texto-secundaria);
 }
