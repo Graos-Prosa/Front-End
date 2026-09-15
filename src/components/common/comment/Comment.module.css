@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: 10px;
     align-self: flex-start;
-    padding: 20px;
+    padding-top: 20px;  
 }
 .reviewInfo{
     display: flex;
