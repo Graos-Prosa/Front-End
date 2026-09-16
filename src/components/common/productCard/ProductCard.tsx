@@ -4,6 +4,7 @@ import Button from '../button/Button';
 import { TiStarFullOutline } from "react-icons/ti";
 
 import { truncateString } from '../../../utils/Util';
+import { useNavigate } from 'react-router-dom';
 
 interface ProductCardProps {
     id: number;
@@ -17,7 +18,7 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({id, img, name, price, rating, amount, productType, discount = 0}: ProductCardProps) {
-    
+    const navigate = useNavigate()
     function verifyAmount(amount: number) {
         if (amount <= 0) {
             return "Esgotado";
@@ -27,8 +28,7 @@ export default function ProductCard({id, img, name, price, rating, amount, produ
     }
 
     function goToProductPage(productId: number) {
-        console.log(`Navegar para a página do produto com ID: ${productId}`);
-        //tratar a lógica de navegação aqui, como usar o react-router para redirecionar para a página do produto
+        navigate(`/product/${productId}`)
     }
 
     function handleAddToCart(productId: number, productAmount: number) {

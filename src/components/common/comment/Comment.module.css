@@ -1,0 +1,34 @@
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-self: flex-start;
+    padding-top: 20px;  
+}
+.reviewInfo{
+    display: flex;
+    flex-direction: column;
+}
+.commentReview{
+    display: flex;
+    flex-direction: column;
+}
+.clientAndRating{
+    display: flex;
+    gap: 10px;
+}
+.client, .star, .commentTitle{
+    font-size: 14px;
+}
+.star{
+    color: var(--cor-tema-secundaria)
+}
+.reviewDate, .commentDescription{
+    font-size: 11px;
+    color: var(--cor-texto-secundaria);
+}
+.divider{
+    height: 1px;
+    width: 100%;
+    background-color: var(--cor-texto-secundaria);
+}

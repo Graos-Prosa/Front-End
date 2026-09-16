@@ -1,0 +1,29 @@
+.productPage{
+    padding: 20px;
+}
+.purchaseBar{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 16px;
+    background: white;
+    border-top: 1px solid #ddd;
+    z-index: 1000;
+}
+.purchaseBar p{
+    color: var(--cor-texto-secundaria);
+    font-size: 12px;
+}
+.purchaseBar span{
+    font-size: 16px;
+}
+.text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
